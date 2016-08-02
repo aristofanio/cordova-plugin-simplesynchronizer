@@ -13,6 +13,9 @@ SimpleSynchronizer allows an android app work in offline.
 cordova plugin add https://github.com/aristofanio/cordova-plugin-simplesynchronizer --save
 ```
 
+## Architecture (overview)
+![Architecture overview](https://raw.githubusercontent.com/aristofanio/cordova-plugin-simplesynchronizer/master/doc/overview.png)
+
 ## Use
 * navigator.ag.requestService.register : use to map requests;
 * navigator.ag.requestService.request : use to request from database;
