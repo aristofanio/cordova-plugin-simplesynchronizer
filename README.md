@@ -9,5 +9,5 @@ SimpleSynchronizer allows an android app work in offline.
 
 
 ## Related projects:
-* [core](https://github.com/aristofanio/simplesynchronizer-core) and
-* [sample](https://github.com/aristofanio/cordova-plugin-simplesynchronizer-sample).
+* [core](https://github.com/aristofanio/simplesynchronizer-core)
+* [sample](https://github.com/aristofanio/cordova-plugin-simplesynchronizer-sample)
