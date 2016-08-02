@@ -14,7 +14,7 @@ cordova plugin add https://github.com/aristofanio/cordova-plugin-simplesynchroni
 ```
 
 ## Architecture (overview)
-![Architecture overview](https://raw.githubusercontent.com/aristofanio/cordova-plugin-simplesynchronizer/master/doc/overview.png)
+<img src="https://raw.githubusercontent.com/aristofanio/cordova-plugin-simplesynchronizer/master/doc/overview.png" width="480px" alt="Architecture overview">
 
 ## Use
 * navigator.ag.requestService.register : use to map requests;
