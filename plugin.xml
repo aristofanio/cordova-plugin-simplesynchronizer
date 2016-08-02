@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-simplesynchronizer" version="0.1.1">
+
+    <name>SimpleSynchronizer</name>
+    <description>Simple synchronizer between RESTful server (readonly) and android client to support simple offline app.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,simple-synchornizer,sqlite,offline-app</keywords>
+
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+
+    <js-module src="www/ag-simplesynchronizer-plugin.js" name="AGSimpleSynchronizerPlugin">
+        <clobbers target="navigator.ag.requestService" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SimpleSynchronizerPlugin" >
+                <param name="android-package" value="ag.cordova.plugin.simplesynchronizer.SimpleSynchronizerPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+        <source-file src="src/android/DatastoreHelper.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/DatastoreService.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/DatastoreServiceException.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/Mapper.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/MapperException.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/SimpleSynchronizer.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/SimpleSynchronizerImpl.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/SimpleSynchronizerException.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/SimpleSynchronizerPlugin.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/Synchronizer.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <source-file src="src/android/SynchronizerException.java" target-dir="src/ag/cordova/plugin/simplesynchronizer" />
+        <info>This plugin require knowlegment in SQLite.</info>
+    </platform>
+	
+</plugin>
